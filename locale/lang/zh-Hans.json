@@ -1,0 +1,9 @@
+{
+		"index": {
+			"home": "首页{tab} 呵呵",
+			"mine": "我的{ me}空间",
+			"company": "我的企业",
+			"process": "我的 {process} { value } 为 {  ok}"
+		},
+		"common.name": "通用 { name }名字"
+	}

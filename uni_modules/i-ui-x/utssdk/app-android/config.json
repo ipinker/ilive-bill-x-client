@@ -1,0 +1,6 @@
+{
+    // 依赖的仓储配置，可选，打包时会合并到原生工程的build.gradle中（打包时不要复制注释）
+	"dependencies": [],
+    // Android系统版本要求，最低Android 5.0（打包时不要复制注释）
+	"minSdkVersion": "23"
+}

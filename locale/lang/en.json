@@ -1,0 +1,9 @@
+{
+	"index": {
+		"home": "Home{tab} jj",
+		"mine": "Mine{ me}space",
+		"company": "My company",
+		"process": "My {process} { value } is {  ok}"
+	},
+	"common.name": "Common { name }name"
+}

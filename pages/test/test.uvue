@@ -1,0 +1,49 @@
+<template>
+	<view class="content">
+		<image class="logo" src="/static/logo.png"></image>
+		<view class="text-area">
+			<text class="title">{{title}}</text>
+			
+		</view>
+		{{$t("index.mine")}}
+		<button type="default" @click="handleSwitchLang">Change {{lang}}</button>
+	</view>
+</template>
+
+<script setup lang="uts">
+	import i18n from "@/locale"
+	const title = "Title test"
+	
+	const lang = computed(() => {
+		console.log(i18n.locale)
+		return i18n.locale
+	})
+	
+	function handleSwitchLang () {
+		if(lang.value == "zh-Hans-US" || lang.value == "zh-Hans") i18n.locale = "en"
+		else i18n.locale = "zh-Hans-US"
+		uni.navigateTo({
+			url: "/pages/index/index"
+		})
+	}
+</script>
+
+<style>
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo {
+		height: 200rpx;
+		width: 200rpx;
+		margin-top: 200rpx;
+		margin-bottom: 50rpx;
+	}
+
+	.title {
+		font-size: 36rpx;
+		color: #8f8f94;
+	}
+</style>

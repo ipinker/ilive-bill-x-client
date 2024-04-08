@@ -1,0 +1,130 @@
+import { ref, computed } from "vue"
+
+export interface Messages extends Record<string, any> {
+	
+}
+
+export type MessagesType = {
+	[K in keyof Messages]: Messages[K]
+} 
+export type LocaleType = string
+
+export interface I18nOptions {
+	id?: string
+	locale?: LocaleType
+	fallbackLocale?: LocaleType
+	inheritLocale?: boolean
+	messages?: MessagesType
+}
+
+export interface ExtI18nOptions {
+	storage?: { 
+		getItem: (key: string) => any, 
+		setItem: (key: string, value: any) => any, 
+		removeItem: (key: string) => any, 
+		clear: (key: string) => any
+	},
+	useCache?: boolean
+}
+
+export class LangManager {
+	
+    id = "0"
+	locale = "zh-Hans"
+	fallbackLocale = "zh-Hans"
+	messages = {
+	}
+    storage = {
+        // @ts-ignore
+        setItem: uni.setStorageSync,
+        // @ts-ignore
+        getItem: uni.getStorageSync,
+        // @ts-ignore
+        removeItem: uni.removeStorageSync
+    }
+    inheritLocale = true;
+	static instance: LangManager | null = null;
+	static getInstance (options: I18nOptions) {
+		if(!LangManager.instance) LangManager.instance = new LangManager(options);
+		return LangManager.instance;
+	}
+	
+	constructor (options: I18nOptions = {}, extOptions = {}) {
+		this.init(options, extOptions);
+	}
+	
+	getLocale() {
+		return this.locale
+	}
+	
+	setLocale(locale) {
+		this.locale = locale
+	}
+	
+	init(options: I18nOptions, extOptions) {
+		const {
+            /** @desc 实例 ID **/
+            id,
+            /** @desc 默认 Message 语言包 **/
+			locale,
+            /** @desc 回退语言，即未配置 Message 时使用替代方案 **/
+			fallbackLocale,
+            /** @desc 是否继承系统的语言 **/
+            inheritLocale = true,
+            /** @desc 语言 集合 **/
+			messages
+		} = options || {};
+		const {
+			storage
+		} = extOptions || {}
+        if(id) this.id = id;
+        if(locale) this.locale = locale
+        if(messages) this.messages = messages
+        if(fallbackLocale) this.fallbackLocale = fallbackLocale
+        this.inheritLocale = inheritLocale;
+	}
+
+    formatPlaceholder(str = "", placeholderMap) {
+        if(!placeholderMap || Object.keys(placeholderMap).length === 0) return str;
+        const matchArr = str.match(new RegExp("{\\s*\\w*\\s*}", "g"));
+        if(!matchArr || matchArr.length === 0) return str;
+        matchArr.forEach((match: string) => {
+            const matchArr = match.match(new RegExp("\\w+", "g")) || [];
+            const key = matchArr[0] || '',
+                value = placeholderMap[key];
+            if(key && value) str = str.replace(match, value);
+        });
+        return str;
+    }
+	
+	getValue(key = "", message = {}, placeholderMap) {
+		if(message[key]) return this.formatPlaceholder(message[key], placeholderMap);
+		const [key1, ...keyMore] = key.split(".");
+		if(keyMore?.length){
+			return this.getValue(
+                keyMore.join("."), 
+                message[key1], 
+                placeholderMap
+            );
+		}
+		return this.getValue(
+            message[key1], 
+            message, 
+            placeholderMap
+        );
+	}
+
+    t(key, placeholderMap) {
+        return this.getValue(
+            key, 
+            this.messages[this.locale] || this.messages[this.fallbackLocale], 
+            placeholderMap
+        );
+    }
+
+    install(app: any) {
+        app.config.globalProperties.$t = this.t.bind(this);
+    }
+}
+
+export const i18n = LangManager.getInstance;

@@ -1,0 +1,20 @@
+import { i18n } from "@/common/plugins/i18n.uts"
+import en from "./lang/en.json";
+import zh from "./lang/zh-Hans.json"
+
+const messages = {
+	en,
+	"zh-Hans": zh,
+	"zh-Hans-US": zh
+}
+
+const currentLocale = uni.getStorageSync("APP-LOCALE") || uni.getSystemInfoSync().appLanguage || "zh-Hans"
+
+const i18nInstance = i18n({
+	// app 暂不支持国际化
+	locale: currentLocale,
+	fallbackLocale: "en",
+	messages
+});
+
+export default i18nInstance;

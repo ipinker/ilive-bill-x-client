@@ -1,0 +1,50 @@
+<template>
+	<view class="content">
+		<image class="logo" src="/static/logo.png"></image>
+		<text :style="{color : titleColor}">{{title}}</text>	
+		
+		<view class="" @click="handleChangeTheme">
+			<text>change theme</text>
+		</view>
+	</view>
+</template>
+
+<script lang="uts" setup>
+	import { HSLA, HSVA, Numberify, RGBA } from "@ctrl/tinycolor";
+	import { useThemeStore } from "@/uni_modules/i-ui-x/theme"
+	const { theme, changeMode } = useThemeStore();
+	const list = ref([])
+	
+	
+	const title = "Title value"
+	const titleColor = computed(() => theme.value?.colorPrimaryText)
+	const bgColor = computed(() => theme.value?.colorBgContainer)
+	function handleSwitchLang() {
+		
+	}
+	
+	function handleChangeTheme() {
+		changeMode()
+		console.log(theme.value)
+	}
+</script>
+
+<style lang="scss">
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: v-bind(bgColor)
+	}
+
+	.logo {
+		height: 200rpx;
+		width: 200rpx;
+		margin-top: 200rpx;
+		margin-bottom: 50rpx;
+	}
+
+	.title {
+		font-size: 36rpx;
+	}
+</style>

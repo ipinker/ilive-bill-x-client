@@ -1,0 +1,21 @@
+import i18nInstance from "../locale/index"
+import { ref, toRefs, reactive } from "vue"
+export function useLocale() {
+	const i18n = reactive(i18nInstance);
+	const locale = computed({
+		get() {
+			return i18n.locale
+		},
+		set(l) {
+			
+		}
+	});
+	
+	const setLocale = (locale) => {
+		i18n.locale = locale;
+	}
+	
+	return toRefs({
+		locale
+	})
+}

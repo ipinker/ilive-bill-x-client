@@ -1,0 +1,21 @@
+{
+	"dependencies": {
+		"@ctrl/tinycolor": "^4.0.3",
+		"ipink-themejs": "^1.0.2",
+		"ipink-util": "^1.0.9",
+		"vue": "3.4.21"
+	},
+	"devDependencies": {
+		"@dcloudio/types": "^3.3.2",
+		"@dcloudio/uni-app-x": "^0.7.12",
+		"@vue/compiler-core": "^3.4.21",
+		"@vue/compiler-dom": "^3.4.21",
+		"@vue/compiler-ssr": "^3.4.21",
+		"@vue/runtime-core": "^3.4.21",
+		"@vue/runtime-dom": "^3.4.21",
+		"@vue/server-renderer": "^3.4.21",
+		"@vue/shared": "^3.4.21",
+		"mini-types": "^0.1.7",
+		"miniprogram-api-typings": "^3.10.0"
+	}
+}
