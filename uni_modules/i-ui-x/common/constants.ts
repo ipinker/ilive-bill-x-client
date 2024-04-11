@@ -22,11 +22,11 @@ export const THEME_LIST: SeedOption[] = [
 /** @desc 结果状态类型 **/
 export type ResultStatus = "success" | "error" | "warning" | "info" | "E404" | "E403" | "E500";
 /** @desc 页面级的状态分类 ：正常页面 | 无数据页面 ｜ 错误页 ｜ 成功页 ｜ 警告 ｜ 信息页 ｜ 403 ｜ 404 ｜ 500 **/
-export type PageStatus = ResultStatus | "default" | "empty";
+export type PageStatus = "success" | "error" | "warning" | "info" | "E404" | "E403" | "E500" | "default" | "empty";
 
-export const NAVIGATE_LIST = [ "navigateTo", "reLaunch", "redirectTo", "switchTab" ] as const;
+export const NAVIGATE_LIST: NavigateType[] = [ "navigateTo", "reLaunch", "redirectTo", "switchTab" ];
 /** @desc 页面级的跳转类型 **/
-export type NavigateType = (typeof NAVIGATE_LIST)[number];
+export type NavigateType = "navigateTo" | "reLaunch" | "redirectTo" | "switchTab"
 
 /** @desc Event **/
 export const UPDATE_MODEL_EVENT = "update:modelValue";
@@ -47,21 +47,22 @@ export const VALUE_KEY = "value";
 export const CHILDREN_KEY = "children";
 
 /** @desc 枚举 尺寸集合 ： "mini", "small", "normal", "big", "large"  **/
-export const ENUM_SIZE_LIST = ["mini", "small", "normal", "big", "large"] as const;
+export const ENUM_SIZE_LIST: EnumSizeType[] = ["mini", "small", "normal", "big", "large"];
 /** @desc 枚举 尺寸类型 ： "mini" ｜ "small" ｜ "normal" ｜ "big" ｜ "large"  **/
-export type EnumSizeType = (typeof ENUM_SIZE_LIST)[number];
+export type EnumSizeType = "mini" | "small" | "normal" | "big" | "large"
 /** @desc 可食用的所有尺寸类型集合  **/
-export const SIZE_LIST = [
+export const SIZE_LIST: SizeType[] = [
     "mini", "small", "normal", "big", "large",  "full",
     "xxxs", "xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl",
-] as const;
+];
 /** @desc 可食用的所有尺寸的类型  **/
-export type SizeType = (typeof SIZE_LIST)[number];
+export type SizeType = "mini" | "small" | "normal" | "big" | "large" |  "full" |
+    "xxxs" | "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "xxxl" | "xxxxl"
 
 /** @desc 可食用的圆角尺寸的集合  **/
-export const RADIUS_LIST = [ "xs", "s", "m", "l" ] as const;
+export const RADIUS_LIST: RadiusType[] = [ "xs", "s", "m", "l" ];
 /** @desc 可食用的圆角尺寸的类型  **/
-export type RadiusType = (typeof RADIUS_LIST)[number];
+export type RadiusType = "xs" | "s" | "m" | "l"
 /** @desc 圆角尺寸 与 theme 共同的Key转化Map  **/
 export const RadiusToSeedKey = {
     'xs': "borderRadius",
@@ -71,14 +72,14 @@ export const RadiusToSeedKey = {
 }
 
 /** @desc 可食用的动画集合  **/
-export const ANIMATION_LIST = [ "", "opacity", "default", "ripple", "color" ] as const;
+export const ANIMATION_LIST: Animation[] = [ "", "opacity", "default", "ripple", "color" ] ;
 /** @desc 可食用的动画类型  **/
-export type Animation = (typeof ANIMATION_LIST)[number];
+export type Animation = "" | "opacity" | "default" | "ripple" | "color"
 
 /** @desc 方向 ： "top", "right", "bottom", "left"  **/
-export const DIR_LIST = [ "top", "right", "bottom", "left" ] as const;
+export const DIR_LIST: DirType[] = [ "top", "right", "bottom", "left" ];
 /** @desc 方向的类型  **/
-export type DirType = (typeof DIR_LIST)[number];
+export type DirType = "top" | "right" | "bottom" | "left"
 
 
 /** @desc 默认样式  **/

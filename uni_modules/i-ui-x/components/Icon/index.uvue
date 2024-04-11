@@ -5,36 +5,38 @@
 </template>
 
 <script lang="uts" setup>
-import {iconProps, IconPropsType, IconEmitsType} from "./icon";
-import {ComputedRef, StyleValue, ref, computed } from "vue";
-import {CLICK_EVENT} from "../../common/constants";
+import { iconProps, IconPropsType } from "./icon";
+import { computed } from "vue";
+import { StyleValue } from "../../typing"
+import { CLICK_EVENT } from "../../common/constants";
 import { useStyle } from "../../hooks/useStyle"
-import {genSize} from "../../common/style";
-import {iconList, IconType} from "./static/liveicon"
+import { genSize } from "../../common/style";
+import { iconList, IconType } from "./static/liveicon"
 const props: IconPropsType = defineProps(iconProps);
 const emits = defineEmits([CLICK_EVENT]);
 const { colorValue } = useStyle();
 
-const unicode = computed(() => {
-    let code = iconList.find((v: IconType) => v.fontClass === props.icon);
+const unicode = computed<string>((): string => {
+	const icon: string = props.icon as unknown as string;
+    let code = iconList.find((v: IconType) => v.fontClass === icon);
     if (code) {
 		return code.unicode
     }
     return ''
 })
 
-const genIconType = computed(() => props.icon.indexOf("icon-") > -1 ? 'iconfont' : 'LiveIcon');
-const genIconValue = computed(() => props.icon.indexOf("icon-") > -1 ? props.icon : ('live-' + props.icon))
+const genIconType = computed<string>((): string => props.icon.indexOf("icon-") > -1 ? 'iconfont' : 'LiveIcon');
+const genIconValue = computed<string>((): string => props.icon.indexOf("icon-") > -1 ? props.icon + '' : ('live-' + props.icon))
 
-const fontIconStyle: ComputedRef<StyleValue> = computed((): StyleValue => {
+const fontIconStyle= computed<StyleValue>((): StyleValue => {
     const style: StyleValue = {};
-    const color = props.color || (props.primary ? 'colorPrimaryText' : '') || '';
+    const color: string = (props.color || (props.primary ? 'colorPrimaryText' : '') || '') as string;
     if(color) style.color = colorValue.value(color);
     if(props.bgColor){
-        style.backgroundColor = colorValue.value(props.bgColor);
+        style.backgroundColor = colorValue.value(props.bgColor as unknown as string);
     }
     if(props.size) {
-        const { width, height } = genSize(props.size);
+        const { width, height } = genSize(props.size as unknown as string);
         style.width = width;
         style.height = height;
         style.lineHeight = height;

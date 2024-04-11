@@ -3,10 +3,7 @@
 // 全局要用的类型放到这里
 import { SeedOption } from "ipink-themejs";
 import { HSLA, HSVA, Numberify, RGBA } from "@ctrl/tinycolor";
-
-export type Num = string | number;
-
-export type StrNum = string | number;
+import type { Properties, PropertiesHyphen } from "csstype"
 
 export type StringMap = { [propName : string] : string };
 export type AnyMap = { [propName : string] : any };
@@ -15,9 +12,7 @@ export type AnyMap = { [propName : string] : any };
 export type SeedKey = keyof SeedOption;
 
 /** @desc ColorKey : 颜色值的类型 SeedKey | string **/
-export type ColorKey = SeedKey | string;
-
-export type CheckType = boolean | string | number;
+export type ColorKey = string;
 
 export type ThemeModeType = "dark" | "light";
 
@@ -101,3 +96,9 @@ export type {
 } from "./common/constants"
 
 
+export interface StyleValue extends 
+	Properties<string>, 
+	PropertiesHyphen<string>
+{
+    [v: `--${string}`]: string;
+};

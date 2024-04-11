@@ -16,6 +16,7 @@
 		"@vue/server-renderer": "^3.4.21",
 		"@vue/shared": "^3.4.21",
 		"mini-types": "^0.1.7",
-		"miniprogram-api-typings": "^3.10.0"
+		"miniprogram-api-typings": "^3.10.0",
+		"csstype": "^3.1.3"
 	}
 }

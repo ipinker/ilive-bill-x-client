@@ -1,4 +1,10 @@
 {
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^I(.*)": "@/uni_modules/i-ui-x/components/$1/index.uvue"
+		}
+	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
@@ -18,7 +24,8 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app x",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
 	},
 	"uniIdRouter": {}
 }

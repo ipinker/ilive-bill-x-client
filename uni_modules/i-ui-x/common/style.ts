@@ -11,7 +11,7 @@ import type { ColorInfo, RadiusStyle, SizeStyle } from "../typing";
 import { UIConfigInstance } from "./config"
 
 /** @desc 将一个单位数值转换为px；10px => 10px, 20rpx => 10px, 20 => 10px **/
-export const genPx = (num: string | number) => {
+export const genPx = (num: any) => {
     if (typeof num === 'string') {
         if (num.indexOf('px') !== -1) {
             if (num.indexOf('rpx') !== -1) {
@@ -41,13 +41,14 @@ export const genPx = (num: string | number) => {
  * @return SizeStyle extends StyleValue
  */
 export const genSize = (size: string, round?: boolean): SizeStyle  => {
-    let sizes = [];
+    let sizes: string[] = [];
 
     if (size && size.indexOf(",") > -1) sizes = size.split(",");
 
     else sizes = [ size, size ];
 
-    const [width, height= width] = sizes;
+    const width: string = sizes[0];
+	const height: string = sizes[1] || width
 
     if (!width && !height) return {};
 
@@ -62,7 +63,7 @@ export const genSize = (size: string, round?: boolean): SizeStyle  => {
  * @param radius { string | number }
  * @return RadiusStyle extends StyleValue
  */
-export const genRadius = (radius: string | number): RadiusStyle  => {
+export const genRadius = (radius: any): RadiusStyle  => {
     if(!isNumber(radius) && !isString(radius)) radius = DEFAULT_STYLE.radius + UIConfigInstance.config.unit;
     return {
         "border-radius": genPx(radius)
@@ -127,7 +128,7 @@ type TinyColorExtend = TinyColor & { _a: number };
 export function genColorInfo(data: ColorInfo, oldHue?: number): ColorInfo {
 	let alpha: number = data && data.a || 1
 	let color: TinyColorExtend,
-        colorStr: string | Numberify<RGBA> | Numberify<HSLA> | Numberify<HSVA>;
+        colorStr: any;
 	if (data && data.hsl) colorStr = data.hsl;
 	else if (data && data.hex && data.hex.length > 0) colorStr = data.hex;
 	else if (data && data.hsv) colorStr = data.hsv;

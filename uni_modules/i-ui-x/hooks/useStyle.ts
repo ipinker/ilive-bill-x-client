@@ -1,44 +1,46 @@
-/*
- * @Author: Gavin New
- * @Date: 2024-02-19 10:21:24
- * @LastEditors: Gavin New
- * @LastEditTime: 2024-02-22 14:36:26
- * @FilePath: /renovation/src/hooks/useStyle.ts
- * @Description: 描述
- */
-import { computed, toRefs } from "vue";
+import { computed, ComputedRef } from "vue";
 import { TinyColor } from "@ctrl/tinycolor";
-import type { SeedKey } from "../typing";
+import type { SeedKey, StyleValue } from "../typing";
 import { useThemeStore } from "../theme";
+import { LIGHT_MODE_ID } from "../common/constants";
 
-
+type ReturnColorStringFunc = (color: string) => string
+type ReturnColorStyleFunc = (colorStr?: string) => StyleValue
+type ReturnGradientStyleFunc = (gradient ?: string) => StyleValue
 export const useStyle = () => {
 
-    const { theme } = useThemeStore();
+    const { theme, mode } = useThemeStore();
 
-    const colorFunc = (color: SeedKey | string): string => {
+    const colorFunc: ReturnColorStringFunc = (color: string): string => {
         const value: TinyColor = new TinyColor(color);
-        if(value.isValid) return value.toRgbString();
+        if(value.isValid){
+			if(LIGHT_MODE_ID !== mode.value) value.darken().toRgbString();
+			return value.toRgbString()
+		};
         return theme.value?.[color as SeedKey] as string;
     };
-
-    const shadow = computed(() => ({ "box-shadow" : `0 2px 6px 0 ${theme.value?.colorShadowBase}`}));
-
-
-    const border = computed(() => ({ "border" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}` }));
-    const borderTop = computed(() => ({ "border-top" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}`}));
-    const borderLeft = computed(() => ({ "border-left" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}` }));
-    const borderBottom = computed(() => ({ "border-bottom" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}` }));
-    const borderRight = computed(() => ({ "border-right" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}` }));
-
-    const placeHolder = computed(() => ({ "color": theme.value?.colorTextQuaternary })) ;
-    const disabledFont = computed(() => ({ "color" : theme.value?.colorTextQuaternary}));
-    const primaryText = computed(() => ({ "color" : theme.value?.colorPrimaryText }));
-    const infoText = computed(() => ({ "color" : theme.value?.colorInfoText }));
-    const text = computed(() => ({ "color" : theme.value?.colorText }));
-    const whiteText = computed(() => ({ "color" : theme.value?.colorWhiteTextBase }));
-    const font = computed(() => {
-        return (colorStr ?: string) => {
+	
+	const shadow = computed<StyleValue>((): StyleValue => {
+		return { "box-shadow" : `0 2px 6px 0 ${theme.value?.colorShadowBase}`}	
+	});
+	
+    const border = computed<StyleValue>((): StyleValue => {
+		return { "border" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}` }
+	});
+    const borderTop = computed<StyleValue>((): StyleValue => {
+		return { "border-top" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}`}
+	});
+    const borderLeft = computed<StyleValue>((): StyleValue => {
+		return { "border-left" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}` }
+	});
+    const borderBottom = computed<StyleValue>((): StyleValue => {
+		return { "border-bottom" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}` }
+	});
+    const borderRight = computed<StyleValue>((): StyleValue => {
+		return { "border-right" : `${theme.value?.borderWidth}px solid ${theme.value?.colorBorder}` }
+	});
+    const borderColor = computed<ReturnColorStyleFunc>((): ReturnColorStyleFunc => {
+        return (colorStr ?: string): StyleValue => {
             let color: string = colorFunc(colorStr || "colorText");
             return { 
                 "color" : color
@@ -46,11 +48,44 @@ export const useStyle = () => {
         }
     });
 
-    const container = computed(() => ({"background-color": theme.value?.colorBgContainer}));
-    const primaryBg = computed(() => ({ "background-color" : theme.value?.colorPrimary }));
-    const bgi = computed(() => ((gradient ?: string) => ({ "background-image" : gradient })));
-    const bg = computed(() => {
-        return (colorStr ?: string, opacity?: number) => {
+    const text = computed<StyleValue>((): StyleValue => {
+		return { "color" : theme.value?.colorText }
+	});
+    const infoText = computed<StyleValue>((): StyleValue => {
+		return { "color" : theme.value?.colorInfoText }
+	});
+    const primaryText = computed<StyleValue>((): StyleValue => {
+		return { "color" : theme.value?.colorPrimaryText }
+	});
+    const whiteText = computed<StyleValue>((): StyleValue => {
+		return { "color" : theme.value?.colorWhiteTextBase }
+	});
+    const disabledText = computed<StyleValue>((): StyleValue => {
+		return { "color" : theme.value?.colorTextQuaternary}
+	});
+    const placeHolderText = computed<StyleValue>((): StyleValue => {
+		return { "color": theme.value?.colorTextQuaternary }
+	});
+    const font = computed<ReturnColorStyleFunc>(() : ReturnColorStyleFunc => {
+        return (colorStr ?: string): StyleValue => {
+            let color: string = colorFunc(colorStr || "colorText");
+            return { 
+                "color" : color
+            }
+        }
+    });
+
+    const container = computed<StyleValue>((): StyleValue => {
+		return {"background-color": theme.value?.colorBgContainer}
+	});
+    const primaryBg = computed<StyleValue>((): StyleValue => {
+		return { "background-color" : theme.value?.colorPrimary }
+	});
+    const bgi = computed<ReturnGradientStyleFunc>((): ReturnGradientStyleFunc => {
+		return (gradient ?: string): StyleValue => ({ "background-image" : gradient })
+	});
+    const bg = computed<ReturnColorStyleFunc>((): ReturnColorStyleFunc => {
+        return (colorStr ?: string, opacity?: number): StyleValue => {
             let color: string = colorFunc(colorStr || "colorBgContainer");
             if(typeof opacity !== "undefined") color = new TinyColor(color).setAlpha(opacity).toRgbString();
             return { 
@@ -59,17 +94,17 @@ export const useStyle = () => {
         }
     });
 
-    const colorValue = computed(() => {
+    const colorValue = computed<ReturnColorStringFunc>((): ReturnColorStringFunc => {
         return colorFunc
     });
 
-    return toRefs({
+    return {
         shadow,
         borderTop,
         borderLeft,
         border,
-        placeHolder,
-        disabledFont,
+        placeHolderText,
+        disabledText,
         text,
         container,
         whiteText,
@@ -82,5 +117,5 @@ export const useStyle = () => {
         borderBottom,
         borderRight,
         colorValue
-    })
+    }
 };

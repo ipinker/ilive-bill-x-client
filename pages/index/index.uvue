@@ -1,40 +1,41 @@
 <template>
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
-		<text :style="{color : titleColor}">{{title}}</text>	
-		
-		<view class="" @click="handleChangeTheme">
-			<text>change theme</text>
+		<text class="title">{{title}}</text>	
+		<Iicon icon="close"/>
+		<view @click="handleChangeTheme">
+			<text :style="[font('gray1')]" class="title">change theme</text>
 		</view>
 	</view>
 </template>
 
 <script lang="uts" setup>
-	import { HSLA, HSVA, Numberify, RGBA } from "@ctrl/tinycolor";
 	import { useThemeStore } from "@/uni_modules/i-ui-x/theme"
+	import { useStyle } from "@/uni_modules/i-ui-x/hooks/useStyle"
 	const { theme, changeMode } = useThemeStore();
+	const { font } = useStyle();
 	const list = ref([])
 	
 	
 	const title = "Title value"
-	const titleColor = computed(() => theme.value?.colorPrimaryText)
-	const bgColor = computed(() => theme.value?.colorBgContainer)
+	const titleColor = computed<string>((): string => theme.value?.colorPrimaryText)
+	const bgColor = computed<string>(() => theme.value?.colorBgContainer)
 	function handleSwitchLang() {
 		
 	}
 	
 	function handleChangeTheme() {
 		changeMode()
-		console.log(theme.value)
 	}
 </script>
 
 <style lang="scss">
 	.content {
+		min-height: 100%;
+		min-width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: v-bind(bgColor)
 	}
 
 	.logo {

@@ -15,7 +15,7 @@ export function useLocale() {
 		i18n.locale = locale;
 	}
 	
-	return toRefs({
+	return {
 		locale
-	})
+	}
 }

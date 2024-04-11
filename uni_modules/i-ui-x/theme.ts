@@ -1,10 +1,14 @@
 // store/theme.ts
 import { createThemeList } from "ipink-themejs";
 import type { SeedOption, ColorToken } from 'ipink-themejs';
-import { THEME_LIST } from "./common/constants";
+import { LIGHT_MODE_ID, THEME_LIST } from "./common/constants";
 import { reactive, computed, ComputedRef } from "vue"
 import { ThemeModeType } from "./typing"
 
+type ThemeCacheType = {
+	id?: string
+	modeId?: ThemeModeType
+}
 const themeList: SeedOption[] = THEME_LIST;
 const list: ColorToken[] = createThemeList({ themeList, useDark: true }) || [];
 export type State = {
@@ -16,9 +20,14 @@ export type State = {
     themeList: ColorToken[]
 }
 
+const THEME_CACHE_KEY = "__theme-store__";
+let id: string = "gg", 
+	modeId: ThemeModeType = LIGHT_MODE_ID; 
+loadCache();
+
 export const state: State = reactive({
-	id: "gg",    // 当前主题
-	modeId: "light", // 当前模式 light | dark
+	id: id,    // 当前主题
+	modeId: modeId, // 当前模式 light | dark
 	themeList: list
 })
 
@@ -34,8 +43,12 @@ export const useThemeStore = () => {
 	
 	/** @desc 切换主题暗黑模式 **/
 	function changeMode(id?: ThemeModeType): void {
-	    if (id) state.modeId = id
+	    if (id) state.modeId = id;
 	    else state.modeId = state.modeId === "light" ? "dark" : "light";
+		
+		setCache({
+			modeId: state.modeId
+		} as ThemeCacheType);
 	}
 	/** @desc 切换主题 **/
 	function change(id: string): void {
@@ -43,6 +56,9 @@ export const useThemeStore = () => {
 	    if(id.includes("-light")) id = id.split("-light")[0];
 	    if(id.includes("-dark")) id = id.split("-dark")[0];
 	    state.id = id;
+		setCache({
+			id: state.id
+		} as ThemeCacheType);
 	}
 	/** @desc 获取主题 **/
 	function get(id: string): ColorToken {
@@ -126,3 +142,17 @@ export const useThemeStore = () => {
 }
 
 
+function setCache(value: ThemeCacheType) {
+	const themeCacheInfo = uni.getStorageSync(THEME_CACHE_KEY) || {} as ThemeCacheType;
+	return uni.setStorageSync(THEME_CACHE_KEY, {
+		... themeCacheInfo,
+		... (value || {})
+	});
+}
+function loadCache() {
+	const themeCacheInfo: ThemeCacheType = uni.getStorageSync(THEME_CACHE_KEY) || {} as ThemeCacheType;
+	if(themeCacheInfo){
+		id = themeCacheInfo.id || id,
+		modeId = themeCacheInfo.modeId || modeId;
+	}
+}

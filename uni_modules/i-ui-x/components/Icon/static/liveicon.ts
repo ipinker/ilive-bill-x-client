@@ -8,8 +8,12 @@ export type IconsData = {
 	glyphs : Array<IconType>
 }
 
+export type IconType = {
+	fontClass : string
+	unicode : string
+}
 
-export const iconList = [
+export const iconList: IconType[] = [
     {
         "fontClass": "list",
         "unicode": "e60c"
@@ -1006,10 +1010,5 @@ export const iconList = [
         "fontClass": "trash-fill",
         "unicode": "e66b"
     }
-] as const;
+];
 
-export type IconType = (typeof iconList)[number];
-export const iconKeyList = iconList.map(item => item.fontClass);
-export type IconEnum = (typeof iconKeyList)[number]
-
-// export const fontData = JSON.parse<IconsDataItem>(fontDataJson)

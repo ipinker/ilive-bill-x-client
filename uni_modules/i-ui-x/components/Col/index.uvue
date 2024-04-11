@@ -1,0 +1,60 @@
+<template>
+    <view class="ICol flex-column" :class="classList" :style="[styleOption]" @click="handleClick">
+        <slot />
+    </view>
+</template>
+<script setup lang="uts">
+import { computed } from 'vue';
+import { StyleValue } from "../../typing"
+import { genPx } from "../../common/style";
+import { colProps, ColPropsType, ColJustifyType, ColAlignType } from "./col"
+import { CLICK_EVENT } from '../../common/constants';
+
+const props: ColPropsType = defineProps(colProps);
+const emits = defineEmits([CLICK_EVENT]);
+const styleOption: StyleValue = {};
+if(props.width){
+    styleOption.width = genPx(props.width);
+}
+if(props.height){
+    styleOption.height = genPx(props.height);
+}
+const classList = computed(() => {
+    const list: string[] = [];
+	const justify: ColJustifyType =  props.justify as unknown as ColJustifyType;
+    switch (justify) {
+        case "center":
+            list.push("flex-justify-center");
+            break;
+        case "end":
+            list.push("flex-justify-end");
+            break;
+        case "between":
+            list.push("flex-justify-between");
+            break;
+        case "around":
+            list.push("flex-justify-around");
+            break;
+        default:
+            list.push("flex-justify-start");
+            break;
+    }
+	const align: ColAlignType =  props.align as unknown as ColAlignType;
+    switch (align) {
+        case "center":
+            list.push("flex-align-center");
+            break;
+        case "end":
+            list.push("flex-align-end");
+            break;
+        default:
+            list.push("flex-align-start");
+            break;
+    }
+    return list;
+});
+
+function handleClick() {
+	emits(CLICK_EVENT);
+}
+</script>

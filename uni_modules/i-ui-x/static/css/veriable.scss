@@ -1,0 +1,274 @@
+/** 使用尺寸概览
+ * @desc 0/min  min
+ * @desc xxxs  -4
+ * @desc xxs   -3
+ * @desc xs    -2
+ * @desc s     -1
+ * @desc m     0
+ * @desc s     1
+ * @desc l     2
+ * @desc xl    3
+ * @desc xxl   4
+ * @desc xxxl  5
+ * @desc xxxxl 6
+ * @desc full/max max
+ */
+
+/** 使用颜色概览
+ * @desc Layout    页面布局（整个页面的背景）
+ * @desc Container 容器
+ * @desc Primary   主题色
+ * @desc Success   成功色
+ * @desc Warn      警告色
+ * @desc Error     错误色
+ * @desc Info      信息色
+ */
+
+
+/** @desc 11px **/
+$i-font-xxxs: 11px !default;
+/** @desc 12px **/
+$i-font-xxs: 12px !default;
+/** @desc 14px **/
+$i-font-xs: 14px !default;
+/** @desc 15px **/
+$i-font-s: 15px !default;
+/** @desc 16px **/
+$i-font-m: 16px !default;
+/** @desc 18px **/
+$i-font-l: 18px !default;
+/** @desc 20px **/
+$i-font-xl: 20px !default;
+/** @desc 21px **/
+$i-font-xxl: 21px !default;
+/** @desc 24px **/
+$i-font-xxxl: 24px !default;
+/** @desc 30px **/
+$i-font-large: 30px !default;
+
+/** @desc Latin **/
+$i-family-default: PingFangSC, PingFang SC, Latin !default;
+
+/** @desc 200 **/
+$i-weight-s: 200;
+/** @desc 400 **/
+$i-weight-m: 400;
+/** @desc 600 **/
+$i-weight-l: 600;
+
+/** @desc 15px **/
+$i-line-xs: 15px;
+/** @desc 17px **/
+$i-line-s: 17px;
+/** @desc 18px **/
+$i-line-m: 18px;
+/** @desc 20px **/
+$i-line-l: 20px;
+/** @desc 22px **/
+$i-line-xl: 22px;
+
+/** @desc 1px **/
+$i-space-s: 1px;
+/** @desc 2px **/
+$i-space-m: 2px;
+/** @desc 3px **/
+$i-space-l: 3px;
+
+/** @desc 2px **/
+$i-radius-xs: 2px;
+/** @desc 3px **/
+$i-radius-s: 3px;
+/** @desc 4px **/
+$i-radius-m: 4px;
+/** @desc 6px **/
+$i-radius-l: 6px;
+/** @desc 8px **/
+$i-radius-xl: 8px;
+/** @desc 10px **/
+$i-radius-xxl: 10px;
+
+/** Color **/
+$i-color-border: #eeeeee !default;
+$i-color-txt: #333333 !default;
+$i-color-placeholder: #BCC1C2 !default;
+$i-color-primary: #1666ff !default;
+$i-color-primary-shadow: rgba(5, 135, 255, 0.1) !default;
+$i-color-white: #ffffff !default;
+$i-color-whitegray: #efefef !default;
+$i-color-gray: #909399 !default;
+$i-bg-layout: #f5f5f9 !default;
+$i-bg-container: #fff !default;
+$i-shadow: 0px -2px 4px 0px $i-color-border !default;
+
+$i-opacity-xs: 0.1 !default;
+$i-opacity-s: 0.3 !default;
+$i-opacity-m: 0.5 !default;
+$i-opacity-l: 0.65 !default;
+$i-opacity-xl: 0.85 !default;
+/** @desc 5 **/
+$i-padding-s: 5px;
+/** @desc 10 **/
+$i-padding-m: 10px;
+/** @desc 150 **/
+$i-padding-l: 15px;
+
+/** @desc 5 **/
+$i-margin-s: 5px;
+/** @desc 10 **/
+$i-margin-m: 10px;
+/** @desc 15 **/
+$i-margin-l: 15px;
+
+/** @desc 1 **/
+$i-border-s: 1px;
+/** @desc 2 **/
+$i-border-m: 2px;
+/** @desc 4 **/
+$i-border-l: 4px;
+
+
+/** @desc 15 **/
+$i-height-xxs: 15px;
+/** @desc 25 **/
+$i-height-xs: 25px;
+/** @desc 30 **/
+$i-height-s: 30px;
+/** @desc 40 **/
+$i-height-m: 40px;
+/** @desc 50 **/
+$i-height-l: 50px;
+/** @desc 60 **/
+$i-height-xl: 60px;
+/** @desc 70 **/
+$i-height-xxl: 70px;
+/** @desc 100vh **/
+$i-height-full: 100vh;
+
+/** @desc 25 **/
+$i-width-xxs: 25px;
+/** @desc 35 **/
+$i-width-xs: 35px;
+/** @desc 40 **/
+$i-width-s: 40px;
+/** @desc 50 **/
+$i-width-m: 50px;
+/** @desc 60 **/
+$i-width-l: 60px;
+/** @desc 120 **/
+$i-width-xl: 120px;
+/** @desc 180 **/
+$i-width-xxl: 180px;
+/** @desc 240 **/
+$i-width-xxxl: 240px;
+/** @desc 690vw **/
+$i-width-xxxxl: calc(100vw - 30px);
+/** @desc 710 **/
+$i-width-xxxxxl: calc(100vw - 20px);
+/** @desc 750 **/
+$i-width-full: 100vw;
+
+$i-index-xxs: 2;
+$i-index-xs: 5;
+$i-index-s: 10;
+$i-index-m: 100;
+$i-index-l: 1000;
+$i-index-xl: 3000;
+$i-index-xxl: 10000;
+
+/* Font style */
+@mixin font($size: $i-font-m,  $color: $i-color-txt, $weight: $i-weight-m, $space: 0) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+	font-family: $i-family-default;
+	letter-spacing: $space;
+}
+
+/** @desc Position style **/
+@mixin position($position: fixed, $top, $right, $bottom, $left, $index) {
+	position: $position;
+	@if $right {
+		right: $right;
+	}
+	@if $left {
+		left: $left;
+	}
+	@if $bottom {
+		bottom: $bottom;
+	}
+	@if $top {
+		top: $top;
+	}
+	@if $index {
+		z-index: $index;
+	}
+}
+
+
+/** @desc Flex **/
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start) {
+	/* #ifndef APP-NVUE */
+	display: flex;
+	/* #endif */
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+/** @desc Flex center **/
+@mixin center($direction: row) {
+	/* #ifndef APP-NVUE */
+	display: flex;
+	/* #endif */
+	justify-content: center;
+	align-items: center;
+	flex-direction: $direction;
+}
+
+/** @desc Flex row center **/
+@mixin verCenter($direction: row) {
+	/* #ifndef APP-NVUE */
+	display: flex;
+	/* #endif */
+	align-items: center;
+	flex-direction: $direction;
+	justify-content: flex-start;
+}
+
+/** @desc Flex column center **/
+@mixin horCenter($direction: row) {
+	/* #ifndef APP-NVUE */
+	display: flex;
+	/* #endif */
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: $direction;
+}
+
+
+/** @desc Flex center **/
+@mixin absCenter($index: 1) {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: $index;
+}
+
+
+/** @desc 单行省略 **/
+@mixin ellipsis1 () {
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+/** @desc 多行省略 **/
+@mixin ellipsis($line: 3) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+	overflow: hidden;
+}
+
+
