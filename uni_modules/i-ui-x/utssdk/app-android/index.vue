@@ -6,7 +6,7 @@
     import View from 'android.view.View'
 
     export default {
-        name: "wx-ui",
+        name: "i-ui",
         data() {
             return {}
         },

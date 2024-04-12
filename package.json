@@ -2,7 +2,7 @@
 	"dependencies": {
 		"@ctrl/tinycolor": "^4.0.3",
 		"ipink-themejs": "^1.0.2",
-		"ipink-util": "^1.0.9",
+		"ipink-util": "^1.0.10",
 		"vue": "3.4.21"
 	},
 	"devDependencies": {

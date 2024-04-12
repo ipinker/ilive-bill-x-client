@@ -6,6 +6,16 @@
 		<view @click="handleChangeTheme">
 			<text :style="[font('gray1')]" class="title">change theme</text>
 		</view>
+		<view @click="openPopup">
+			Open popup
+		</view>
+		<button type="default" @click="handleOpen">Open</button>
+		<button type="default" @click="handleClose">Close</button>
+		<ITransition ref="transitionRef" :duration="600">
+			<view class="TransitionView">
+				112233
+			</view>
+		</ITransition>
 	</view>
 </template>
 
@@ -17,15 +27,25 @@
 	const list = ref([])
 	
 	
-	const title = "Title value"
-	const titleColor = computed<string>((): string => theme.value?.colorPrimaryText)
-	const bgColor = computed<string>(() => theme.value?.colorBgContainer)
-	function handleSwitchLang() {
+	function openPopup() {
 		
 	}
 	
+	const title = "Title value"
+	const titleColor = computed<string>((): string => theme.value?.colorPrimaryText)
+	const bgColor = computed<string>(() => theme.value?.colorBgContainer)
 	function handleChangeTheme() {
 		changeMode()
+	}
+	const transitionRef: Ref<ITransitionComponentPublicInstance | null> = ref(null);
+	function handleOpen() {
+		nextTick(() => {
+			transitionRef.value?.open();
+		})
+	}
+	function handleClose() {
+		console.log(transitionRef.value)
+		transitionRef.value?.close();
 	}
 </script>
 
@@ -47,5 +67,11 @@
 
 	.title {
 		font-size: 36rpx;
+	}
+	
+	.TransitionView {
+		width: 300rpx;
+		height: 200rpx;
+		background-color: red;
 	}
 </style>

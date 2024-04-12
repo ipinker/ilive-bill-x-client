@@ -1,4 +1,4 @@
-import { PropType } from "vue";
+import { PropType, ExtractPropTypes } from "vue";
 import { SizeType } from "../../common/constants";
 
 /**
@@ -36,7 +36,7 @@ export const buttonProps = {
      */
     size: {
         type: String as unknown as PropType<SizeType>,
-        default: "normal"
+        default: "normal" as SizeType
     },
     width: String,
     height: String,
@@ -135,6 +135,6 @@ export const buttonProps = {
      */
     material: Boolean,
 
-} as const;
+};
 
-export type ButtonPropsType = typeof buttonProps;
+export type ButtonPropsType = ExtractPropTypes<typeof buttonProps>;

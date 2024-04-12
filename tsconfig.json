@@ -22,9 +22,7 @@
         ],
         "types": [
             "@dcloudio/types",
-            "@dcloudio/uni-app-x",
-            "mini-types/types",
-            "miniprogram-api-typings"
+            "@dcloudio/uni-app-x"
         ]
     },
     "exclude": [

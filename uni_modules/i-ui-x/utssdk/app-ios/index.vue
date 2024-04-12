@@ -8,7 +8,7 @@
     } from "UIKit"
 
     export default {
-        name: "wx-ui",
+        name: "i-ui",
         data() {
             return {}
         },

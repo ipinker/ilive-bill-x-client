@@ -14,7 +14,7 @@ export const loadingProps = {
     /** @desc Loading 类型 **/
     type: {
         type: String as unknown as PropType<LoadingType>,
-        default: "0"
+        default: "0" as LoadingType
     },
     /** @desc Loading的填充色 **/
     color: String,

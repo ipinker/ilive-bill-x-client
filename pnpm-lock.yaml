@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.0.2
     version: 1.0.2
   ipink-util:
-    specifier: ^1.0.9
-    version: 1.0.9
+    specifier: ^1.0.10
+    version: 1.0.10
   vue:
     specifier: 3.4.21
     version: 3.4.21
@@ -189,8 +189,8 @@ packages:
       '@ctrl/tinycolor': 4.0.3
     dev: false
 
-  /ipink-util@1.0.9:
-    resolution: {integrity: sha512-ivngQGLYvSmrmn2fSCqFz2n862HvNr8d3xERy0ib23ylvP5ae9PVxoREbgIqY7yKgorC2QTZRQbLqh/sp6/CBg==}
+  /ipink-util@1.0.10:
+    resolution: {integrity: sha512-avcuRQ/6zc5+dcXTCyKmw8rhA2kAP9gMj570gZ6s0RAPQO5Nzv1s/z4mCqLk5d5ccrpTBe75LeKu1RkuMclpzg==}
     dependencies:
       '@ctrl/tinycolor': 4.0.3
     dev: false
