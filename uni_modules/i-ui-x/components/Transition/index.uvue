@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-	import { onMounted, onBeforeUnmount, Ref, ref, reactive, nextTick, PropType } from "vue"
+	import { onMounted, onBeforeUnmount, Ref, ref, nextTick } from "vue"
 	import { StyleValue } from "../../typing"
 	import { CLICK_EVENT, CHANGE_EVENT } from "../../common/constants"
 	import { transitionProps, TransitionPropsType, ModeType, TimingFunction } from "./transition"
@@ -16,7 +16,7 @@
 	let isShow : Ref<boolean> = ref(false),
 		transform : Ref<string> = ref(''),
 		opacity : Ref<number> = ref(1),
-		duration : Ref<number> = ref(400),
+		duration : Ref<number> = ref(600),
 		timingFunction: Ref<TimingFunction> = ref("ease"),
 		transformOrigin: Ref<string> = ref("50% 50%"),
 		delay: Ref<number> = ref(0),
@@ -35,10 +35,9 @@
 		const transitionProperty = props.mode.indexOf("fade") > -1 ? "opacity" : "transform";
 		const transitionStyleStr = `transform: ${transform.value
 			}; opacity: ${opacity.value
-			}; transition-duration${duration.value + 's'
-			}; transition-property:${transitionProperty
+			}; transition-duration: ${duration.value + 's'
+			}; transition-property: ${transitionProperty
 			}; transition-timing-function: ${timingFunction.value};`;
-			console.log(transitionStyleStr)
 		return transitionStyleStr;
 	})
 	// 处理内置组合动画
@@ -64,10 +63,6 @@
 			'zoom-in': 'scale',
 			'zoom-out': 'scale'
 		}
-	}
-	// 驼峰转中横线
-	function toLine(name : string) {
-		return name.replace(/([A-Z])/g, '-$1').toLowerCase()
 	}
 	// 处理内置组合动画
 	function tranfromInit(type : boolean) {
@@ -179,11 +174,10 @@
 
 	onMounted(() => {
 		transformOrigin.value = (props.transformOrigin as unknown as string) || '50% 50%';
-		timingFunction.value = (props.timingFunction as unknown as string) || 'ease';
+		timingFunction.value = (props.timingFunction as unknown as TimingFunction) || 'ease';
 		delay.value = (props.delay as unknown as number) || 0;
 		duration.value = (props.duration as unknown as number) / 1000;
 		nextTick(() => {
-			console.log(duration.value)
 			styleInit(false)
 		})
 	})

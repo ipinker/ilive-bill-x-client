@@ -41,7 +41,7 @@ export const transitionProps = {
   },
   duration: {
 	  type: Number,
-	  default: 300
+	  default: 600
   },
   customClass:{
 	  type: String,

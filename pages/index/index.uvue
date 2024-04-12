@@ -44,7 +44,6 @@
 		})
 	}
 	function handleClose() {
-		console.log(transitionRef.value)
 		transitionRef.value?.close();
 	}
 </script>
