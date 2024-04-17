@@ -91,7 +91,9 @@ export const DEFAULT_STYLE = {
 	fontSize: 30,
 	lineHeight: 40,
 	zIndex: 99,
-	delay: 300
+	zMaskIndex: 999,
+	duration: 0.3,
+	delay: 0
 } as const;
 /** @desc 默认样式的类型  **/
 export type DefaultStyleType = typeof DEFAULT_STYLE;

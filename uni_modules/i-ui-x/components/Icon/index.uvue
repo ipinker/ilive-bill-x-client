@@ -1,5 +1,5 @@
 <template>
-    <text class="IFontIconContainer" :class="[genIconType, genIconValue]" :style="[fontIconStyle]" @click="handleClick">
+    <text class="IFontIconContainer" :class="[classes, presetIconfont]" :style="[fontIconStyle]" @click="handleClick">
 		<slot>{{unicode}}</slot>
 	</text>
 </template>
@@ -11,10 +11,15 @@ import { StyleValue } from "../../typing"
 import { CLICK_EVENT } from "../../common/constants";
 import { useStyle } from "../../hooks/useStyle"
 import { genSize } from "../../common/style";
-import { iconList, IconType } from "./static/liveicon"
+import { iconList, IconType } from "./liveicon"
 const props: IconPropsType = defineProps(iconProps);
 const emits = defineEmits([CLICK_EVENT]);
 const { colorValue } = useStyle();
+
+const presetIconfont = computed<string>((): string => {
+	if(props.icon.startsWith("icon-")) return "iconfont"
+	return ""
+})
 
 const unicode = computed<string>((): string => {
 	const icon: string = props.icon as unknown as string;
@@ -24,9 +29,6 @@ const unicode = computed<string>((): string => {
     }
     return ''
 })
-
-const genIconType = computed<string>((): string => props.icon.indexOf("icon-") > -1 ? 'iconfont' : 'LiveIcon');
-const genIconValue = computed<string>((): string => props.icon.indexOf("icon-") > -1 ? props.icon + '' : ('live-' + props.icon))
 
 const fontIconStyle= computed<StyleValue>((): StyleValue => {
     const style: StyleValue = {};
@@ -42,6 +44,9 @@ const fontIconStyle= computed<StyleValue>((): StyleValue => {
         style.lineHeight = height;
         style.fontSize = width;
     }
+	if(props.fontFamily) {
+		style['font-family'] = props.fontFamily;
+	}
     return style;
 })
 
@@ -50,25 +55,17 @@ const handleClick = () => emits(CLICK_EVENT);
 
 <style lang="scss">
 @font-face {
-	font-family: liveicon;
-	src: url('./static/uniicons.ttf');
+	font-family: LiveIconFamily;
+	src: url('./liveicon.ttf');
 }
 
-.LiveIcon {
-    font-family: liveicon !important;
-    text-decoration: none;
-    text-align: center;
-    &::before {
-        display: inline !important;
-    }
-}
 .IFontIconContainer {
-    display: inline-block;
+	font-family: LiveIconFamily;
     width: $i-font-m;
     height: $i-font-m;
+	font-size: $i-font-m;
+	font-style: normal;
     line-height: $i-font-m;
     text-align: center;
-    color: inherit;
-    font-size: inherit;
 }
 </style>

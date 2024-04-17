@@ -1,12 +1,17 @@
 /** @desc uts 导入 .d.ts 会报错， 这里就不用 .d.ts 了 **/
 
 // 全局要用的类型放到这里
+import { Ref } from "vue"
 import { SeedOption } from "ipink-themejs";
 import { HSLA, HSVA, Numberify, RGBA } from "@ctrl/tinycolor";
 import type { Properties, PropertiesHyphen } from "csstype"
 
-export type StringMap = { [propName : string] : string };
-export type AnyMap = { [propName : string] : any };
+export interface StringObject { 
+	[propName : string] : string 
+};
+export interface AnyObject { 
+	[propName : string] : any 
+};
 
 
 export type SeedKey = keyof SeedOption;
@@ -71,6 +76,10 @@ export interface ThemeJsonOption {
 export interface ThemeJson {
     dark: ThemeJsonOption
     light: ThemeJsonOption
+}
+
+export interface ElementRef {
+	_ref: Ref<Element | null>
 }
 
 /**

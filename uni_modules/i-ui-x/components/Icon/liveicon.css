@@ -9,10 +9,7 @@
     font-family: liveicon !important;
     text-decoration: none;
     text-align: center;
-}
-.liveicon::before,
-.LiveIcon::before {
-	display: inline !important;
+	font-style: normal;
 }
 
   .live-forward-new:before {

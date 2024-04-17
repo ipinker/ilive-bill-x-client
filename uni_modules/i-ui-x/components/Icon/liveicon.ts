@@ -16,999 +16,999 @@ export type IconType = {
 export const iconList: IconType[] = [
     {
         "fontClass": "list",
-        "unicode": "e60c"
+        "unicode": "\ue60c"
     },
     {
         "fontClass": "facebook",
-        "unicode": "e72f"
+        "unicode": "\ue72f"
     },
     {
         "fontClass": "google",
-        "unicode": "e87a"
+        "unicode": "\ue87a"
     },
     {
         "fontClass": "swap-top",
-        "unicode": "e605"
+        "unicode": "\ue605"
     },
     {
         "fontClass": "code",
-        "unicode": "e6ff"
+        "unicode": "\ue6ff"
     },
     {
         "fontClass": "fold",
-        "unicode": "e8a7"
+        "unicode": "\ue8a7"
     },
     {
         "fontClass": "unfold",
-        "unicode": "e8a8"
+        "unicode": "\ue8a8"
     },
     {
         "fontClass": "game",
-        "unicode": "e626"
+        "unicode": "\ue626"
     },
     {
         "fontClass": "layout",
-        "unicode": "e641"
+        "unicode": "\ue641"
     },
     {
         "fontClass": "statistics",
-        "unicode": "e644"
+        "unicode": "\ue644"
     },
     {
         "fontClass": "weibo-full",
-        "unicode": "e648"
+        "unicode": "\ue648"
     },
     {
         "fontClass": "facebook-fill",
-        "unicode": "e649"
+        "unicode": "\ue649"
     },
     {
         "fontClass": "qq-fill",
-        "unicode": "e887"
+        "unicode": "\ue887"
     },
     {
         "fontClass": "google-fill",
-        "unicode": "eaa8"
+        "unicode": "\ueaa8"
     },
     {
         "fontClass": "swap-left",
-        "unicode": "eaf5"
+        "unicode": "\ueaf5"
     },
     {
         "fontClass": "swap-right",
-        "unicode": "eaf6"
+        "unicode": "\ueaf6"
     },
     {
         "fontClass": "return",
-        "unicode": "e700"
+        "unicode": "\ue700"
     },
     {
         "fontClass": "search-right",
-        "unicode": "e701"
+        "unicode": "\ue701"
     },
     {
         "fontClass": "taobao",
-        "unicode": "e786"
+        "unicode": "\ue786"
     },
     {
         "fontClass": "live-payment",
-        "unicode": "e702"
+        "unicode": "\ue702"
     },
     {
         "fontClass": "yiwen",
-        "unicode": "e7f2"
+        "unicode": "\ue7f2"
     },
     {
         "fontClass": "rili1",
-        "unicode": "e703"
+        "unicode": "\ue703"
     },
     {
         "fontClass": "rili2",
-        "unicode": "e704"
+        "unicode": "\ue704"
     },
     {
         "fontClass": "rili4",
-        "unicode": "e705"
+        "unicode": "\ue705"
     },
     {
         "fontClass": "rili3",
-        "unicode": "e706"
+        "unicode": "\ue706"
     },
     {
         "fontClass": "rili5",
-        "unicode": "e707"
+        "unicode": "\ue707"
     },
     {
         "fontClass": "rili7",
-        "unicode": "e708"
+        "unicode": "\ue708"
     },
     {
         "fontClass": "rili8",
-        "unicode": "e709"
+        "unicode": "\ue709"
     },
     {
         "fontClass": "rili11",
-        "unicode": "e70a"
+        "unicode": "\ue70a"
     },
     {
         "fontClass": "rili9",
-        "unicode": "e70b"
+        "unicode": "\ue70b"
     },
     {
         "fontClass": "rili12",
-        "unicode": "e70c"
+        "unicode": "\ue70c"
     },
     {
         "fontClass": "rili10",
-        "unicode": "e70d"
+        "unicode": "\ue70d"
     },
     {
         "fontClass": "rili13",
-        "unicode": "e70e"
+        "unicode": "\ue70e"
     },
     {
         "fontClass": "rili14",
-        "unicode": "e70f"
+        "unicode": "\ue70f"
     },
     {
         "fontClass": "rili6",
-        "unicode": "e710"
+        "unicode": "\ue710"
     },
     {
         "fontClass": "rili15",
-        "unicode": "e711"
+        "unicode": "\ue711"
     },
     {
         "fontClass": "rili17",
-        "unicode": "e712"
+        "unicode": "\ue712"
     },
     {
         "fontClass": "rili16",
-        "unicode": "e714"
+        "unicode": "\ue714"
     },
     {
         "fontClass": "rili18",
-        "unicode": "e715"
+        "unicode": "\ue715"
     },
     {
         "fontClass": "rili19",
-        "unicode": "e716"
+        "unicode": "\ue716"
     },
     {
         "fontClass": "rili21",
-        "unicode": "e717"
+        "unicode": "\ue717"
     },
     {
         "fontClass": "rili20",
-        "unicode": "e718"
+        "unicode": "\ue718"
     },
     {
         "fontClass": "rili24",
-        "unicode": "e719"
+        "unicode": "\ue719"
     },
     {
         "fontClass": "rili22",
-        "unicode": "e71a"
+        "unicode": "\ue71a"
     },
     {
         "fontClass": "rili25",
-        "unicode": "e71b"
+        "unicode": "\ue71b"
     },
     {
         "fontClass": "rili23",
-        "unicode": "e71c"
+        "unicode": "\ue71c"
     },
     {
         "fontClass": "rili27",
-        "unicode": "e71d"
+        "unicode": "\ue71d"
     },
     {
         "fontClass": "rili26",
-        "unicode": "e71e"
+        "unicode": "\ue71e"
     },
     {
         "fontClass": "rili29",
-        "unicode": "e71f"
+        "unicode": "\ue71f"
     },
     {
         "fontClass": "rili28",
-        "unicode": "e721"
+        "unicode": "\ue721"
     },
     {
         "fontClass": "rili31",
-        "unicode": "e722"
+        "unicode": "\ue722"
     },
     {
         "fontClass": "rili30",
-        "unicode": "e723"
+        "unicode": "\ue723"
     },
     {
         "fontClass": "import",
-        "unicode": "e724"
+        "unicode": "\ue724"
     },
     {
         "fontClass": "favorite",
-        "unicode": "e725"
+        "unicode": "\ue725"
     },
     {
         "fontClass": "more-vertical",
-        "unicode": "e8c7"
+        "unicode": "\ue8c7"
     },
     {
         "fontClass": "empty",
-        "unicode": "e726"
+        "unicode": "\ue726"
     },
     {
         "fontClass": "pay-pal",
-        "unicode": "e785"
+        "unicode": "\ue785"
     },
     {
         "fontClass": "touzi",
-        "unicode": "e727"
+        "unicode": "\ue727"
     },
     {
         "fontClass": "bottle",
-        "unicode": "e728"
+        "unicode": "\ue728"
     },
     {
         "fontClass": "dog",
-        "unicode": "e729"
+        "unicode": "\ue729"
     },
     {
         "fontClass": "luggage",
-        "unicode": "e72a"
+        "unicode": "\ue72a"
     },
     {
         "fontClass": "sofa",
-        "unicode": "e72b"
+        "unicode": "\ue72b"
     },
     {
         "fontClass": "run",
-        "unicode": "e72c"
+        "unicode": "\ue72c"
     },
     {
         "fontClass": "packet",
-        "unicode": "e8b0"
+        "unicode": "\ue8b0"
     },
     {
         "fontClass": "eat",
-        "unicode": "e72d"
+        "unicode": "\ue72d"
     },
     {
         "fontClass": "swap-bottom",
-        "unicode": "e602"
+        "unicode": "\ue602"
     },
     {
         "fontClass": "order",
-        "unicode": "e63b"
+        "unicode": "\ue63b"
     },
     {
         "fontClass": "set-new",
-        "unicode": "e603"
+        "unicode": "\ue603"
     },
     {
         "fontClass": "alipay",
-        "unicode": "e646"
+        "unicode": "\ue646"
     },
     {
         "fontClass": "search-new",
-        "unicode": "e6ef"
+        "unicode": "\ue6ef"
     },
     {
         "fontClass": "check-inactive",
-        "unicode": "e720"
+        "unicode": "\ue720"
     },
     {
         "fontClass": "me",
-        "unicode": "e6f0"
+        "unicode": "\ue6f0"
     },
     {
         "fontClass": "me-fill",
-        "unicode": "e6f1"
+        "unicode": "\ue6f1"
     },
     {
         "fontClass": "radio-active",
-        "unicode": "e642"
+        "unicode": "\ue642"
     },
     {
         "fontClass": "wechat-full",
-        "unicode": "e6f2"
+        "unicode": "\ue6f2"
     },
     {
         "fontClass": "pie",
-        "unicode": "e6f3"
+        "unicode": "\ue6f3"
     },
     {
         "fontClass": "expand",
-        "unicode": "e6f4"
+        "unicode": "\ue6f4"
     },
     {
         "fontClass": "check-active",
-        "unicode": "e6f5"
+        "unicode": "\ue6f5"
     },
     {
         "fontClass": "light",
-        "unicode": "e6f6"
+        "unicode": "\ue6f6"
     },
     {
         "fontClass": "about",
-        "unicode": "e6f7"
+        "unicode": "\ue6f7"
     },
     {
         "fontClass": "cache",
-        "unicode": "e6f8"
+        "unicode": "\ue6f8"
     },
     {
         "fontClass": "E404",
-        "unicode": "e61d"
+        "unicode": "\ue61d"
     },
     {
         "fontClass": "E500",
-        "unicode": "e61e"
+        "unicode": "\ue61e"
     },
     {
         "fontClass": "E403",
-        "unicode": "e61f"
+        "unicode": "\ue61f"
     },
     {
         "fontClass": "share",
-        "unicode": "ed2e"
+        "unicode": "\ued2e"
     },
     {
         "fontClass": "backspace",
-        "unicode": "e62e"
+        "unicode": "\ue62e"
     },
     {
         "fontClass": "convert",
-        "unicode": "e651"
+        "unicode": "\ue651"
     },
     {
         "fontClass": "delete-new",
-        "unicode": "e8b6"
+        "unicode": "\ue8b6"
     },
     {
         "fontClass": "radio-inactive",
-        "unicode": "e8bb"
+        "unicode": "\ue8bb"
     },
     {
         "fontClass": "theme",
-        "unicode": "e631"
+        "unicode": "\ue631"
     },
     {
         "fontClass": "error",
-        "unicode": "e6f9"
+        "unicode": "\ue6f9"
     },
     {
         "fontClass": "off",
-        "unicode": "e64b"
+        "unicode": "\ue64b"
     },
     {
         "fontClass": "copy",
-        "unicode": "e6fa"
+        "unicode": "\ue6fa"
     },
     {
         "fontClass": "analyze",
-        "unicode": "e63c"
+        "unicode": "\ue63c"
     },
     {
         "fontClass": "switch",
-        "unicode": "e6fb"
+        "unicode": "\ue6fb"
     },
     {
         "fontClass": "warning",
-        "unicode": "e6fc"
+        "unicode": "\ue6fc"
     },
     {
         "fontClass": "success",
-        "unicode": "e6fd"
+        "unicode": "\ue6fd"
     },
     {
         "fontClass": "dark",
-        "unicode": "e6fe"
+        "unicode": "\ue6fe"
     },
     {
         "fontClass": "arrow-right",
-        "unicode": "e6e9"
+        "unicode": "\ue6e9"
     },
     {
         "fontClass": "calendar",
-        "unicode": "e6eb"
+        "unicode": "\ue6eb"
     },
     {
         "fontClass": "chatboxes",
-        "unicode": "e6ec"
+        "unicode": "\ue6ec"
     },
     {
         "fontClass": "success-plain",
-        "unicode": "e6ed"
+        "unicode": "\ue6ed"
     },
     {
         "fontClass": "arrow-down",
-        "unicode": "e6d5"
+        "unicode": "\ue6d5"
     },
     {
         "fontClass": "cloud-download",
-        "unicode": "e6d7"
+        "unicode": "\ue6d7"
     },
     {
         "fontClass": "chat-fill",
-        "unicode": "e6d8"
+        "unicode": "\ue6d8"
     },
     {
         "fontClass": "auth-fill",
-        "unicode": "e6d9"
+        "unicode": "\ue6d9"
     },
     {
         "fontClass": "cloud-upload",
-        "unicode": "e6da"
+        "unicode": "\ue6da"
     },
     {
         "fontClass": "chat",
-        "unicode": "e6db"
+        "unicode": "\ue6db"
     },
     {
         "fontClass": "cart",
-        "unicode": "e6dc"
+        "unicode": "\ue6dc"
     },
     {
         "fontClass": "camera",
-        "unicode": "e6dd"
+        "unicode": "\ue6dd"
     },
     {
         "fontClass": "arrow-left",
-        "unicode": "e6de"
+        "unicode": "\ue6de"
     },
     {
         "fontClass": "back",
-        "unicode": "e6df"
+        "unicode": "\ue6df"
     },
     {
         "fontClass": "chatbubble-fill",
-        "unicode": "e6e1"
+        "unicode": "\ue6e1"
     },
     {
         "fontClass": "chatbubble",
-        "unicode": "e6e2"
+        "unicode": "\ue6e2"
     },
     {
         "fontClass": "chatboxes-fill",
-        "unicode": "e6e3"
+        "unicode": "\ue6e3"
     },
     {
         "fontClass": "auth",
-        "unicode": "e6e4"
+        "unicode": "\ue6e4"
     },
     {
         "fontClass": "right",
-        "unicode": "e6e5"
+        "unicode": "\ue6e5"
     },
     {
         "fontClass": "arrow-up",
-        "unicode": "e6e6"
+        "unicode": "\ue6e6"
     },
     {
         "fontClass": "calendar-fill",
-        "unicode": "e6e7"
+        "unicode": "\ue6e7"
     },
     {
         "fontClass": "bars",
-        "unicode": "e6e8"
+        "unicode": "\ue6e8"
     },
     {
         "fontClass": "gift-fill",
-        "unicode": "e6c5"
+        "unicode": "\ue6c5"
     },
     {
         "fontClass": "eye-slash",
-        "unicode": "e6c6"
+        "unicode": "\ue6c6"
     },
     {
         "fontClass": "flag-fill",
-        "unicode": "e6c7"
+        "unicode": "\ue6c7"
     },
     {
         "fontClass": "color-fill",
-        "unicode": "e6c8"
+        "unicode": "\ue6c8"
     },
     {
         "fontClass": "download-fill",
-        "unicode": "e6c9"
+        "unicode": "\ue6c9"
     },
     {
         "fontClass": "email",
-        "unicode": "e6ca"
+        "unicode": "\ue6ca"
     },
     {
         "fontClass": "color",
-        "unicode": "e6cb"
+        "unicode": "\ue6cb"
     },
     {
         "fontClass": "contact",
-        "unicode": "e6cc"
+        "unicode": "\ue6cc"
     },
     {
         "fontClass": "download",
-        "unicode": "e6cd"
+        "unicode": "\ue6cd"
     },
     {
         "fontClass": "close-full",
-        "unicode": "e6ce"
+        "unicode": "\ue6ce"
     },
     {
         "fontClass": "cloud-download-fill",
-        "unicode": "e6cf"
+        "unicode": "\ue6cf"
     },
     {
         "fontClass": "cloud-upload-fill",
-        "unicode": "e6d0"
+        "unicode": "\ue6d0"
     },
     {
         "fontClass": "down",
-        "unicode": "e652"
+        "unicode": "\ue652"
     },
     {
         "fontClass": "camera-fill",
-        "unicode": "e654"
+        "unicode": "\ue654"
     },
     {
         "fontClass": "email-fill",
-        "unicode": "e6d1"
+        "unicode": "\ue6d1"
     },
     {
         "fontClass": "edit",
-        "unicode": "e6d2"
+        "unicode": "\ue6d2"
     },
     {
         "fontClass": "forward",
-        "unicode": "e653"
+        "unicode": "\ue653"
     },
     {
         "fontClass": "close-empty",
-        "unicode": "e6d3"
+        "unicode": "\ue6d3"
     },
     {
         "fontClass": "cart-fill",
-        "unicode": "e6d4"
+        "unicode": "\ue6d4"
     },
     {
         "fontClass": "home",
-        "unicode": "e6b5"
+        "unicode": "\ue6b5"
     },
     {
         "fontClass": "gift",
-        "unicode": "e6b6"
+        "unicode": "\ue6b6"
     },
     {
         "fontClass": "set-fill",
-        "unicode": "e657"
+        "unicode": "\ue657"
     },
     {
         "fontClass": "hand-down-fill",
-        "unicode": "e6b7"
+        "unicode": "\ue6b7"
     },
     {
         "fontClass": "hand-down",
-        "unicode": "e6b8"
+        "unicode": "\ue6b8"
     },
     {
         "fontClass": "home-fill",
-        "unicode": "e6b9"
+        "unicode": "\ue6b9"
     },
     {
         "fontClass": "eye-slash-fill",
-        "unicode": "e656"
+        "unicode": "\ue656"
     },
     {
         "fontClass": "fire-fill",
-        "unicode": "e6ba"
+        "unicode": "\ue6ba"
     },
     {
         "fontClass": "flag",
-        "unicode": "e6bb"
+        "unicode": "\ue6bb"
     },
     {
         "fontClass": "eye",
-        "unicode": "e6bc"
+        "unicode": "\ue6bc"
     },
     {
         "fontClass": "heart",
-        "unicode": "e6bd"
+        "unicode": "\ue6bd"
     },
     {
         "fontClass": "font",
-        "unicode": "e6be"
+        "unicode": "\ue6be"
     },
     {
         "fontClass": "folder-add",
-        "unicode": "e6bf"
+        "unicode": "\ue6bf"
     },
     {
         "fontClass": "set",
-        "unicode": "e6c0"
+        "unicode": "\ue6c0"
     },
     {
         "fontClass": "close",
-        "unicode": "e655"
+        "unicode": "\ue655"
     },
     {
         "fontClass": "eye-fill",
-        "unicode": "e6c1"
+        "unicode": "\ue6c1"
     },
     {
         "fontClass": "folder-add-fill",
-        "unicode": "e6c2"
+        "unicode": "\ue6c2"
     },
     {
         "fontClass": "contact-fill",
-        "unicode": "e6c4"
+        "unicode": "\ue6c4"
     },
     {
         "fontClass": "mail-open-fill",
-        "unicode": "e6a2"
+        "unicode": "\ue6a2"
     },
     {
         "fontClass": "image",
-        "unicode": "e6a3"
+        "unicode": "\ue6a3"
     },
     {
         "fontClass": "map-pin",
-        "unicode": "e6a5"
+        "unicode": "\ue6a5"
     },
     {
         "fontClass": "mic-fill",
-        "unicode": "e6a6"
+        "unicode": "\ue6a6"
     },
     {
         "fontClass": "locked",
-        "unicode": "e6a7"
+        "unicode": "\ue6a7"
     },
     {
         "fontClass": "loop",
-        "unicode": "e6a8"
+        "unicode": "\ue6a8"
     },
     {
         "fontClass": "mic",
-        "unicode": "e6a9"
+        "unicode": "\ue6a9"
     },
     {
         "fontClass": "images",
-        "unicode": "e6aa"
+        "unicode": "\ue6aa"
     },
     {
         "fontClass": "location",
-        "unicode": "e6ab"
+        "unicode": "\ue6ab"
     },
     {
         "fontClass": "location-fill",
-        "unicode": "e6ac"
+        "unicode": "\ue6ac"
     },
     {
         "fontClass": "images-fill",
-        "unicode": "e658"
+        "unicode": "\ue658"
     },
     {
         "fontClass": "info-plain",
-        "unicode": "e6ad"
+        "unicode": "\ue6ad"
     },
     {
         "fontClass": "image-fill",
-        "unicode": "e6ae"
+        "unicode": "\ue6ae"
     },
     {
         "fontClass": "heart-fill",
-        "unicode": "e6af"
+        "unicode": "\ue6af"
     },
     {
         "fontClass": "hand-up",
-        "unicode": "e6b0"
+        "unicode": "\ue6b0"
     },
     {
         "fontClass": "link",
-        "unicode": "e6b1"
+        "unicode": "\ue6b1"
     },
     {
         "fontClass": "help-fill",
-        "unicode": "e6b2"
+        "unicode": "\ue6b2"
     },
     {
         "fontClass": "hand-up-fill",
-        "unicode": "e6b3"
+        "unicode": "\ue6b3"
     },
     {
         "fontClass": "headphones",
-        "unicode": "e6b4"
+        "unicode": "\ue6b4"
     },
     {
         "fontClass": "navigate",
-        "unicode": "e65b"
+        "unicode": "\ue65b"
     },
     {
         "fontClass": "paperclip",
-        "unicode": "e691"
+        "unicode": "\ue691"
     },
     {
         "fontClass": "micoff",
-        "unicode": "e692"
+        "unicode": "\ue692"
     },
     {
         "fontClass": "notification-fill",
-        "unicode": "e693"
+        "unicode": "\ue693"
     },
     {
         "fontClass": "notification",
-        "unicode": "e694"
+        "unicode": "\ue694"
     },
     {
         "fontClass": "more",
-        "unicode": "e695"
+        "unicode": "\ue695"
     },
     {
         "fontClass": "map-fill",
-        "unicode": "e696"
+        "unicode": "\ue696"
     },
     {
         "fontClass": "minus",
-        "unicode": "e697"
+        "unicode": "\ue697"
     },
     {
         "fontClass": "locked-fill",
-        "unicode": "e698"
+        "unicode": "\ue698"
     },
     {
         "fontClass": "navigate-fill",
-        "unicode": "e699"
+        "unicode": "\ue699"
     },
     {
         "fontClass": "map-pin-ellipse",
-        "unicode": "e69a"
+        "unicode": "\ue69a"
     },
     {
         "fontClass": "more-fill",
-        "unicode": "e69b"
+        "unicode": "\ue69b"
     },
     {
         "fontClass": "minus-fill",
-        "unicode": "e69c"
+        "unicode": "\ue69c"
     },
     {
         "fontClass": "map",
-        "unicode": "e659"
+        "unicode": "\ue659"
     },
     {
         "fontClass": "medal",
-        "unicode": "e69d"
+        "unicode": "\ue69d"
     },
     {
         "fontClass": "help",
-        "unicode": "e69e"
+        "unicode": "\ue69e"
     },
     {
         "fontClass": "info",
-        "unicode": "e69f"
+        "unicode": "\ue69f"
     },
     {
         "fontClass": "mail-open",
-        "unicode": "e6a0"
+        "unicode": "\ue6a0"
     },
     {
         "fontClass": "medal-fill",
-        "unicode": "e6a1"
+        "unicode": "\ue6a1"
     },
     {
         "fontClass": "reload",
-        "unicode": "e67f"
+        "unicode": "\ue67f"
     },
     {
         "fontClass": "refresh",
-        "unicode": "e680"
+        "unicode": "\ue680"
     },
     {
         "fontClass": "refresh-fill",
-        "unicode": "e681"
+        "unicode": "\ue681"
     },
     {
         "fontClass": "add-fill",
-        "unicode": "e682"
+        "unicode": "\ue682"
     },
     {
         "fontClass": "phone-fill",
-        "unicode": "e683"
+        "unicode": "\ue683"
     },
     {
         "fontClass": "paperplane-fill",
-        "unicode": "e684"
+        "unicode": "\ue684"
     },
     {
         "fontClass": "personadd-fill",
-        "unicode": "e685"
+        "unicode": "\ue685"
     },
     {
         "fontClass": "pulldown",
-        "unicode": "e686"
+        "unicode": "\ue686"
     },
     {
         "fontClass": "redo",
-        "unicode": "e687"
+        "unicode": "\ue687"
     },
     {
         "fontClass": "phone",
-        "unicode": "e688"
+        "unicode": "\ue688"
     },
     {
         "fontClass": "qq",
-        "unicode": "e689"
+        "unicode": "\ue689"
     },
     {
         "fontClass": "personadd",
-        "unicode": "e68a"
+        "unicode": "\ue68a"
     },
     {
         "fontClass": "add",
-        "unicode": "e68b"
+        "unicode": "\ue68b"
     },
     {
         "fontClass": "redo-fill",
-        "unicode": "e68c"
+        "unicode": "\ue68c"
     },
     {
         "fontClass": "add-plain",
-        "unicode": "e68d"
+        "unicode": "\ue68d"
     },
     {
         "fontClass": "paperplane",
-        "unicode": "e68e"
+        "unicode": "\ue68e"
     },
     {
         "fontClass": "person-fill",
-        "unicode": "e68f"
+        "unicode": "\ue68f"
     },
     {
         "fontClass": "person",
-        "unicode": "e690"
+        "unicode": "\ue690"
     },
     {
         "fontClass": "micoff-fill",
-        "unicode": "e65a"
+        "unicode": "\ue65a"
     },
     {
         "fontClass": "vip-fill",
-        "unicode": "e66d"
+        "unicode": "\ue66d"
     },
     {
         "fontClass": "undo-fill",
-        "unicode": "e66e"
+        "unicode": "\ue66e"
     },
     {
         "fontClass": "top",
-        "unicode": "e66f"
+        "unicode": "\ue66f"
     },
     {
         "fontClass": "tune-fill",
-        "unicode": "e670"
+        "unicode": "\ue670"
     },
     {
         "fontClass": "starhalf",
-        "unicode": "e671"
+        "unicode": "\ue671"
     },
     {
         "fontClass": "sound-fill",
-        "unicode": "e672"
+        "unicode": "\ue672"
     },
     {
         "fontClass": "star",
-        "unicode": "e673"
+        "unicode": "\ue673"
     },
     {
         "fontClass": "staff-fill",
-        "unicode": "e674"
+        "unicode": "\ue674"
     },
     {
         "fontClass": "sound",
-        "unicode": "e675"
+        "unicode": "\ue675"
     },
     {
         "fontClass": "staff",
-        "unicode": "e676"
+        "unicode": "\ue676"
     },
     {
         "fontClass": "circle-empty",
-        "unicode": "e677"
+        "unicode": "\ue677"
     },
     {
         "fontClass": "star-fill",
-        "unicode": "e678"
+        "unicode": "\ue678"
     },
     {
         "fontClass": "settings",
-        "unicode": "e65e"
+        "unicode": "\ue65e"
     },
     {
         "fontClass": "shop",
-        "unicode": "e679"
+        "unicode": "\ue679"
     },
     {
         "fontClass": "settings-fill",
-        "unicode": "e67a"
+        "unicode": "\ue67a"
     },
     {
         "fontClass": "shop-fill",
-        "unicode": "e67b"
+        "unicode": "\ue67b"
     },
     {
         "fontClass": "smallcircle-filled",
-        "unicode": "e67c"
+        "unicode": "\ue67c"
     },
     {
         "fontClass": "search",
-        "unicode": "e67d"
+        "unicode": "\ue67d"
     },
     {
         "fontClass": "refresh-empty",
-        "unicode": "e65d"
+        "unicode": "\ue65d"
     },
     {
         "fontClass": "pyq",
-        "unicode": "e65c"
+        "unicode": "\ue65c"
     },
     {
         "fontClass": "scan",
-        "unicode": "e67e"
+        "unicode": "\ue67e"
     },
     {
         "fontClass": "spinner-cycle",
-        "unicode": "e65f"
+        "unicode": "\ue65f"
     },
     {
         "fontClass": "videocam-fill",
-        "unicode": "e66c"
+        "unicode": "\ue66c"
     },
     {
         "fontClass": "weibo",
-        "unicode": "e661"
+        "unicode": "\ue661"
     },
     {
         "fontClass": "wechat",
-        "unicode": "e662"
+        "unicode": "\ue662"
     },
     {
         "fontClass": "wallet",
-        "unicode": "e663"
+        "unicode": "\ue663"
     },
     {
         "fontClass": "vip",
-        "unicode": "e664"
+        "unicode": "\ue664"
     },
     {
         "fontClass": "wallet-fill",
-        "unicode": "e665"
+        "unicode": "\ue665"
     },
     {
         "fontClass": "delete",
-        "unicode": "e660"
+        "unicode": "\ue660"
     },
     {
         "fontClass": "upload-fill",
-        "unicode": "e666"
+        "unicode": "\ue666"
     },
     {
         "fontClass": "videocam",
-        "unicode": "e667"
+        "unicode": "\ue667"
     },
     {
         "fontClass": "tune",
-        "unicode": "e668"
+        "unicode": "\ue668"
     },
     {
         "fontClass": "upload",
-        "unicode": "e669"
+        "unicode": "\ue669"
     },
     {
         "fontClass": "undo",
-        "unicode": "e66a"
+        "unicode": "\ue66a"
     },
     {
         "fontClass": "trash-fill",
-        "unicode": "e66b"
+        "unicode": "\ue66b"
     }
 ];
 
